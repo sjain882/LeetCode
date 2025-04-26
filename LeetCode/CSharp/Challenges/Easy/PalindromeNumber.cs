@@ -8,13 +8,19 @@ using System.Threading.Tasks;
 
 namespace Leetcode.Challenges.Easy
 {
-    internal class PalindromeNumber
+    public class PalindromeNumber
     {
+        public static bool IsPalindrome(int x)
+        {
+            char[] asCharArr = Math.Abs(x).ToString().ToCharArray();
 
+            if (asCharArr[0] == asCharArr[asCharArr.Length-1])
+            {
+                return true;
+            }
 
+            return false;
 
-
-
-
+        }
     }
 }
